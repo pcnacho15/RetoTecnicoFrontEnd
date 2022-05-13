@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3>{{Usuario}}</h3>
+            <p>Premio acumulado: {{PremioAcumuado}}</p>
+        </div>
+        <div class="col-6">
+            <h3>Ronda: {{Ronda.num_ronda}}</h3>
+        </div>
+        <div class="col-6 text-end">
+            <h3>Premio de la ronda: {{Ronda.premio}}$</h3>
+        </div>
+        <div class="col-12 text-center">
+            <h4>Pregunta: {{Ronda.pregunta}}</h4>
+        </div>
+        <div *ngFor="let respuesta of Opciones"
+        (click)="vaidarRespuesta(respuesta.opcion)" 
+        class="col-12 btnRespuesta mt-4 text-center">
+        {{respuesta.opcion}}
+        </div>
+
+        <div class="col-4 mt-5">
+            <a (click)="retirarse()"class="btn retirarme">Retirarme</a>
+        </div>
+    </div>
+</div>
+
+<br><br><br>

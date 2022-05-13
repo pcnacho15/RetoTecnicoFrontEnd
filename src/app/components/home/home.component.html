@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row mt-5 text-center">
+      <div class="col-12">
+        <h3>Bienvenido al concurso de preguntas</h3>
+        <p>Participa y ganas grandes premios en efectico</p>
+      </div>
+      <div class="col-12">
+        <a *ngIf="participa" (click)="salir()" class="btn btn-danger">Salir del juego</a>        
+      </div>
+      <div *ngIf="!participa" class="col-12 mt-5">
+        <form novalidate class="row g-3" #formRegistro="ngForm"
+        (ngSubmit)="crearJugador(formRegistro)">
+          <div class="col-6">
+            <input [(ngModel)]="jugador.nombre" 
+            name="inputNombre"
+            #inputNombre="ngModel"
+            required 
+            minlength="3"
+            [class.is-invalid]="inputNombre.invalid && inputNombre.touched"
+            type="text" class="form-control" name="inputNombre" placeholder="Nombre">
+            <span class="text-danger" *ngIf="inputNombre.invalid && inputNombre.touched">Ingresar mínimo 3 caracteres</span>
+          </div>
+          <div class="col-6">
+            <input [(ngModel)]="jugador.apellido" 
+            name="inputApellido"
+            #inputApellido="ngModel"
+            required 
+            minlength="3"
+            [class.is-invalid]="inputApellido.invalid && inputApellido.touched"
+            type="text" class="form-control"  placeholder="Apellido">
+            <span class="text-danger" *ngIf="inputApellido.invalid && inputApellido.touched">Ingresar mínimo 3 caracteres</span>
+          </div>
+          <button type="submit" class="btn btn-primary mb-3">Jugar</button>
+        </form>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-6">
+        <h4>Historico de jugadores</h4>
+        <app-historico></app-historico>
+      </div>
+    </div>
+  </div>
+
+

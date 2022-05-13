@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<table class="table mt-5">
+    <thead>
+      <tr>
+        <th scope="col">Intento #</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Premio Ganado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let participacion of misParticipaciones; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{participacion.nombre}}</td>
+        <td>{{participacion.fecha_participa}}</td>
+        <td>{{participacion.premioObtenido}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,26 @@
+.btnRespuesta{
+    background-color: #8000ff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #400080;
+    cursor: pointer;
+    height: 70px;
+    padding: 20px;
+}
+
+.btnRespuesta:hover{
+    background-color: #800080;
+    box-shadow: 10px 10px 5px #400040;
+}
+
+.btnRespuesta:active{
+    box-shadow: none;
+}
+
+.retirarme{
+    background-color: #800080 !important;
+    border-radius: 10px;
+    text-decoration: none;
+    height: 60px;
+    padding: 15px;
+    width: 100%;
+}
