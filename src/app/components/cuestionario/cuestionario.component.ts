@@ -87,10 +87,11 @@ export class CuestionarioComponent implements OnInit {
               this.guardarCuestionario();
               this.jugadorService.eliminarTokens();
               setTimeout(() => {
-                this.ruta.navigateByUrl('/participaciones');
-              }, 1500);
+                this.ruta.navigateByUrl('/home');
+              }, 2000);
+            }else{
+              location.reload();
             }
-            location.reload();
         } else if (result.isDenied) {
           if (!localStorage.getItem('premio')) {
             localStorage.setItem('premio', JSON.stringify(this.Ronda.premio));
