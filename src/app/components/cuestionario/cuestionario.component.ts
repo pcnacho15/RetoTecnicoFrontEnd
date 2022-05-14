@@ -80,11 +80,11 @@ export class CuestionarioComponent implements OnInit {
               Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: 'Felicidad, terminaste el juego, ganaste',
+                title: 'Felicidades, terminaste el juego, ganaste',
                 showConfirmButton: false,
                 timer: 1500
-              });
-              this.guardarCuestionario();
+              }); 
+              this.retirarse();
               this.jugadorService.eliminarTokens();
               setTimeout(() => {
                 this.ruta.navigateByUrl('/home');
