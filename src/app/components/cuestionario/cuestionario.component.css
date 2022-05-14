@@ -4,7 +4,7 @@
     box-shadow: 10px 10px 5px #400080;
     cursor: pointer;
     height: 70px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .btnRespuesta:hover{
@@ -21,6 +21,6 @@
     border-radius: 10px;
     text-decoration: none;
     height: 60px;
-    padding: 15px;
+    padding: 7px;
     width: 100%;
 }

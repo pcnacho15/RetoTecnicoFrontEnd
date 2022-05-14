@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
         }
       }, (err)=>{
         this.jugadorService.crearJugador(this.jugador).subscribe();
-        this.ruta.navigateByUrl('/cuestionario');
+        location.reload();
       });
     }
   }

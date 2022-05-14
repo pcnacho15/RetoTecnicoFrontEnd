@@ -6,7 +6,8 @@
         <p>Participa y ganas grandes premios en efectico</p>
       </div>
       <div class="col-12">
-        <a *ngIf="participa" (click)="salir()" class="btn btn-danger">Salir del juego</a>        
+        <a *ngIf="participa" routerLink="/cuestionario"class="btn btn-primary">Jugar</a>        
+        <a *ngIf="participa" (click)="salir()" class="btn btn-danger m-3">Salir del juego</a>        
       </div>
       <div *ngIf="!participa" class="col-12 mt-5">
         <form novalidate class="row g-3" #formRegistro="ngForm"

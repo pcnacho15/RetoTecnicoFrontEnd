@@ -68,7 +68,7 @@ export class CuestionarioComponent implements OnInit {
         showDenyButton: true,
         showCancelButton: false,
         confirmButtonColor: '#339900',
-        confirmButtonText: `Continuar a la ronda ${this.Ronda.num_ronda + 1}`,
+        confirmButtonText: `Continuar a la siguiente`,
         denyButtonText: `Salirme con ${this.PremioAcumuado + this.Ronda.premio}$`,
       }).then((result) => {
         if (result.isConfirmed) {
@@ -86,7 +86,9 @@ export class CuestionarioComponent implements OnInit {
               });
               this.guardarCuestionario();
               this.jugadorService.eliminarTokens();
-              this.ruta.navigate(['/home']);
+              setTimeout(() => {
+                this.ruta.navigateByUrl('/participaciones');
+              }, 1500);
             }
             location.reload();
         } else if (result.isDenied) {

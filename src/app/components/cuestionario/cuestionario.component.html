@@ -2,14 +2,17 @@
 
 <div class="container mt-5">
     <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-12 mb-5 text-center">
             <h3>{{Usuario}}</h3>
-            <p>Premio acumulado: {{PremioAcumuado}}</p>
+            <p style="font-size: 30px;">Premio acumulado: {{PremioAcumuado}}</p>
         </div>
-        <div class="col-6">
+        <div class="col-4">
             <h3>Ronda: {{Ronda.num_ronda}}</h3>
         </div>
-        <div class="col-6 text-end">
+        <div class="col-4 text-center">
+            <h3>Categoria: {{Ronda.nombre_categoria}}</h3>
+        </div>
+        <div class="col-4 text-end">
             <h3>Premio de la ronda: {{Ronda.premio}}$</h3>
         </div>
         <div class="col-12 text-center">
@@ -17,12 +20,12 @@
         </div>
         <div *ngFor="let respuesta of Opciones"
         (click)="vaidarRespuesta(respuesta.opcion)" 
-        class="col-12 btnRespuesta mt-4 text-center">
+        class="col-12 btnRespuesta mt-4 text-center" style="font-size: 30px; color: white;">
         {{respuesta.opcion}}
         </div>
 
-        <div class="col-4 mt-5">
-            <a (click)="retirarse()"class="btn retirarme">Retirarme</a>
+        <div class="col-4 mt-5" >
+            <a (click)="retirarse()"class="btn retirarme" style="font-size: 30px; color: white;">Retirarme</a>
         </div>
     </div>
 </div>
