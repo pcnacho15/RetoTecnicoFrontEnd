@@ -7,4 +7,7 @@ npm install jquery
 npm install sweetalert2
 npm install jwt-decode
 
-y por último sería iniciar el servidor con "ng serve -o", no olvidarse de iniciar también el servidor de la api de node con el comando "npm run dev"
+y por último sería iniciar el servidor con "ng serve -o", no olvidarse de iniciar también el servidor de la api de node con el comando "npm run dev".
+
+
+Nota: La versión utilizada de Angular CLI: 13.3.3
