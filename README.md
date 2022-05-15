@@ -11,3 +11,5 @@ y por último sería iniciar el servidor con "ng serve -o", no olvidarse de inic
 
 
 Nota: La versión utilizada de Angular CLI: 13.3.3
+
+Notas del juego: Cuando ingreses tu nombre y apellido, si no estabas registrado, deberás volver a ingresar el mismo nombre y el mismo apellido con el que te registraste para para poder iniciar la sesión.
